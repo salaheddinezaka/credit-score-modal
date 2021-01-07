@@ -1,0 +1,42 @@
+.container {
+  width: 100%;
+  max-width: 650px;
+}
+
+.dropdownContainer {
+  position: relative;
+}
+
+.dropdownInput {
+  border-color: #000;
+  background-color: #f7fafc;
+  width: 100%;
+  padding: 15px;
+}
+
+.dropdownInput::placeholder {
+  color: #a0aec0;
+}
+
+.dropdownList {
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  border-bottom-right-radius: 0.375rem;
+  border-bottom-left-radius: 0.375rem;
+  max-height: 250;
+  overflow-y: scroll;
+  background-color: #eee;
+  padding: 0;
+  list-style: none;
+  position: absolute;
+  width: 100%;
+}
+
+.dropdownItem {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}

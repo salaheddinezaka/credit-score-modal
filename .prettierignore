@@ -1,0 +1,7 @@
+# Ignore artifacts:
+build
+coverage
+.history
+dist
+.cache
+node_modules
