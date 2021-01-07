@@ -4,7 +4,7 @@ import "./index.css";
 import { createScript } from "./utils";
 
 const ZONE_ID = "idaq0b";
-const DATA_FILTER = "data-opeid";
+const DATA_FILTER = "data-credit-score";
 
 const App = () => {
   useEffect(() => {
