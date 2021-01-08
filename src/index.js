@@ -4,7 +4,7 @@ import CreditScoreModal from "./CreditScoreModal";
 import "./index.css";
 import { createScript } from "./utils";
 
-const ZONE_ID = "us0vdk";
+const ZONE_ID = "4bhygl";
 const DATA_FILTER = "data-credit-score";
 
 const App = () => {
@@ -34,7 +34,7 @@ const App = () => {
       if(filterValue === ''){
         setShowModal(true);
       }
-      console.log(filterValue)
+      console.log(filterValue || 'null')
     }, 2000);
 
     return () => clearTimeout(runTimeout);
