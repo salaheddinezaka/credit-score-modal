@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import CreditScoreModal from "./CreditScoreModal";
 import DropDown from "./DropDown";
 import "./index.css";
-import { createScript } from "./utils";
+import { createScript, waitFor } from "./utils";
 
 const ZONE_ID = "7a6nx7";
 const DATA_FILTER = "data-credit-score";
@@ -31,7 +31,8 @@ const App = () => {
       script = createScript(ZONE_ID);
     }
     offersDiv?.appendChild(script);
-    const runTimeout = setTimeout(() => {
+
+    waitFor('#dropdown-credit-score', () => {
       if (filterValue === "") {
         setShowModal(true);
       }
@@ -40,9 +41,7 @@ const App = () => {
         document.getElementById("dropdown-credit-score")
       );
       console.log(filterValue || "null");
-    }, 3000);
-
-    return () => clearTimeout(runTimeout);
+    })
   }, [filterValue]);
 
   return (
