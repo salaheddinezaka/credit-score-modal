@@ -10,8 +10,6 @@
 
 .scores__modal {
   position: absolute;
-  visibility: hidden;
-  opacity: 0;
   max-height: calc(100vh - 60px);
   width: 288px;
   top: 0%;

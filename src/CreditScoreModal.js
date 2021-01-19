@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import React from "react";
 import CloseIcon from "./CloseIcon";
 import ModalButton from "./ModalButton";
@@ -13,11 +14,14 @@ export default function CreditScoreModal({
         className="scores__modal--background"
         style={{ display: `${show ? "block" : "none"}` }}
       ></div>
-      <div className="scores__modal" style={{
-        visibility: `${show ? "visible" : "hidden"}`,
-        opacity: `${show ? "1" : "0"}`,
-        top: `${show ? "10%" : "0%"}`,
-      }}>
+      <motion.div
+        className="scores__modal"
+        animate={show ? "open" : "close"}
+        variants={{
+          open: { display: "block", top: 50, opacity: 1 },
+          close: { display: "none", top: 0, opacity: 0 },
+        }}
+      >
         <CloseIcon onClick={closeHandler} />
         <div className="modal__info">
           <div className="modal__header">
@@ -52,7 +56,7 @@ export default function CreditScoreModal({
             />
           </div>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 }
